@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css\style.css' %}">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body id="homeimg">
+    <nav class="navbar navbar-expand-sm navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand col-1 text-center" href="#">
+                <img src="{% static 'css\images\img8.png' %}" style="width: 2em;">
+            </a>
+            <!-- <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <div id="menu">
+                <ul class="navbar-nav h5">                
+                    <li class="nav-item">
+                        <a class="nav-link" href="/viewusers">Viewusers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+    {% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-6 text-white" id="para">
+                <h1 class="text-center">Admin Page</h1>
+                <p id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consequatur expedita reiciendis accusantium quam eveniet quis, atque cupiditate similique facilis eum sit sapiente cum odit? Praesentium ullam incidunt odio quaerat.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quos ratione eius adipisci quisquam error aspernatur perferendis asperiores expedita, non velit quasi voluptatem nam repellendus provident sapiente itaque facere animi.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum ipsum nam quos rerum nostrum. Molestiae repellat nisi aliquam animi debitis molestias sunt assumenda in exercitationem nam suscipit, dolor itaque ex!   
+                    loLorem, ipsum dolor sit amet consectetur adipisicing elit.Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+            </div>
+            <div class="col-5 mt-5">
+                <img src="{% static 'css\images\img7.webp' %}" alt="" style="width: 90%; margin-left: 20%; margin-top: 20%; ">
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,73 @@
+{% extends 'adminlayout.html' %}
+{% load static %}
+    {% block content %}
+    <h1 class="text-center text-white bg-secondary p-2">Users Details</h1>
+    <div class="container-fluid alert overflow-scroll">
+        <div class="row ">
+            <table class="table">
+                <thead>
+                    <th>NAME</th>
+                    <th>USERNAME</th>
+                    <th>PASSWORD</th>
+                    <th>GENDER</th>
+                    <th>MOBILE</th>
+                    <th>EMAIL</th>
+                    <th>DESIGNATION</th>
+                    <th>COURSE</th>
+                    <th>GRADUATION</th>
+                    <th>ADDRESS</th>
+                    <th>PINCODE</th>
+                    <th>Updation</th>
+                    <th>Deletion</th>
+                </thead>
+                {% for user in users %}
+                <tr>
+                    <form action="/modify">
+                        <td>
+                            <input name="name" type="text" value="{{user.name}}">                            
+                        </td>
+                        <td>
+                            <input name="username" type="text" value="{{user.username}}">
+                        </td>
+                        <td>
+                            <input name="password" type="text" value="{{user.password}}">
+                        </td>
+                        <td>
+                            <input name="gender" type="text" value="{{user.gender}}">
+                        </td>
+                        <td>
+                            <input name="mobile" type="text" value="{{user.mobile}}">
+                        </td>
+                        <td>
+                            <input name="email" type="text" value="{{user.email}}">
+                        </td>
+                        <td>
+                            <input name="desig" type="text" value="{{user.desig}}">
+                        </td>
+                        <td>
+                            <input name="course" type="text" value="{{user.course}}">
+                        </td>
+                        <td>
+                            <input name="graduation" type="text" value="{{user.graduation}}">
+                        </td>
+                        <td>
+                            <input name="address" type="text" value="{{user.address}}">
+                        </td>
+                        <td>
+                            <input name="pincode" type="text" value="{{user.pincode}}">
+                        </td>
+                        <td>
+                            <button name="operation" class="btn btn-primary" value="update" type="submit">Update</button>            
+                        </td>
+                        <td>
+                            <button name="operation" class="btn btn-danger" value="delete" type="submit">Delete</button>            
+                        </td>
+                    </form>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

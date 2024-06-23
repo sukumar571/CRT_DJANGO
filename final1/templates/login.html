@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css\style.css' %}">
+    <link rel="stylesheet" href="{% static 'JavaScript/css/bootstrap.min.css'%}">
+    <script src="{% static 'JavaScript/js/bootstrap.bundle.min.js'%}"></script>
+</head>
+<body id="bg2">
+    <div class="mt-5" id="bb">
+        <h1 class="text-center text-white">Login Form</h1>
+        <form action="/logincheck/">
+            <span class="text-light mt-3" style="text-align: center;">{{msg}}</span>
+            <!-- <div class="row"> -->
+                <div class="col mt-3">
+                    <input type="text" class="form-control" placeholder="Username" name="uname">
+                </div>
+                <div class="col mt-3">
+                    <input type="password" class="form-control" placeholder="Password" name="pwd">
+                </div>
+                <div>
+                    <a href="" class="navbar-brand">
+                        <p class="text-center text-primary mt-4">forgot password?</p>
+                    </a>
+                </div>
+                <div>
+                    <p class="text-center text-white mt-4">Or</p>
+                </div>
+                <div>
+                    <a href="" class="navbar-brand">
+                        <p class="text-center text-primary mt-4">Don't have an account? Register</p>
+                    </a>
+                </div>
+                <div>
+                    <button class="btn btn-info w-100 float-center " id="btn">Login</button>
+                </div>
+            <!-- </div> -->
+        </form>
+    </div>
+</body>
+</html>
